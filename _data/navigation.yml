@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+
+- name: Realtime Graphics
+  link: /realtime_graphics.html
+
+- name: Offline Grahpics
+  link: /offline_graphics.html
+
+- name: Audio
+  link: /audio.html
+  
+- name: Resume
+  link: /resume.html
