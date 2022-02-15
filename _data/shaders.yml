@@ -1,2 +1,15 @@
-oscilloscope:
-    src: https://www.shadertoy.com/embed/sdfyzN
+tetra_fractal:
+    src: 7lyGRz
+    time: 0
+    
+glass_mandelbrot:
+    src: NdjyRm
+    time: 1
+    
+cube_pixels:
+    src: 7sXyRN
+    time: 2
+    
+kaleidocycles:
+    src: stGGzz
+    time: 6
