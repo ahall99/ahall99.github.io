@@ -1,15 +1,19 @@
 tetra_fractal:
+    title: Crystal Tetrahedron Fractal by amhall on Shadertoy
     src: 7lyGRz
     time: 0
     
 glass_mandelbrot:
+    title: Glass Mandelbrot by amhall on Shadertoy
     src: NdjyRm
     time: 1
     
 cube_pixels:
+    title: Cube Pixel Tetrahedron by amhall on Shadertoy
     src: 7sXyRN
     time: 2
     
 kaleidocycles:
+    title: Kaleidocycles by amhall on Shadertoy
     src: stGGzz
     time: 6

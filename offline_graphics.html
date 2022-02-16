@@ -3,10 +3,77 @@ layout: default
 title: Offline Graphics | Anthony Hall
 ---
 <h2>Offline Graphics Projects</h2>
-<p>Site under construction.</p>
+<p>These projects are either too computationally expensive to run in real-time on a GPU or inherently GPU-unfriendly tasks. As it stands, these are all part of the same software project and are implemented on the CPU. Here is the <a href="https://github.com/ahall99/BrotRender" target="_blank">source code</a>.</p>
 
-<h3>Mandelbrot Histogram (Buddhabrot)</h3>
+<h3>Quartic Mandelbrot Histogram (Buddhabrot)</h3>
 
-<h3>Newton's Fractal Histogram</h3>
+<div class="exhibition">
+	<div class="exhibition-text">
+	
+	<p>If you've never heard the terms Buddhabrot or Nebulabrot, I highly recommend <a href="https://superliminal.com/fractals/bbrot/" target="_blank">this article</a>. Essentially, it is a histogram of the orbits of points that are <em>not</em> in the set.</p>
+
+	<p>Consider that for a given trajectory, it has a starting C value, and at any iteration, it has some z value. Thus, there is a plane of seed values (C plane) and a plane of the points the trajectories visit (z plane, which is the traditional view). Since each plane has a real and imaginary axis, the object is 4-dimensional. (Technically , by selecting different z<sub>0</sub> values rather than fixing <nobr>z<sub>0</sub> = 0,</nobr> the object could be considered 6-dimensional. I plan to explore this in the near future, but a very small amount of experimentation suggests the results may not be super interesting.)</p>
+
+	<p>There are <a href="https://www.youtube.com/user/wmilberry/videos" target="_blank">great examples</a> on YouTube of this rendering method applied to the Mandelbrot set and related fractals. Rather than recreate existing works, I plan to use perspective projection of the 4D points to give a sense of some of the 3D and 4D depth in addition to the rotations. I plan to focus the quartic Mandelbrot, <nobr>z<sup>4</sup> + C,</nobr> because I've never seen it animated and I love the tri-fold symmetry; "Every triangle is a love triangle when you love triangles."</p>
+
+	<p>The main still image was rendered at 108 megapixels. Below are rough drafts of different rotations.<p>
+	
+	</div>
+	<div class="exhibition-view">
+		<img src="/assets/images/histogram/bbrot_square.jpg" alt="Quartic Buddhabrot">
+		<p>z-plane histogram of <nobr>z<sup>4</sup> + C</nobr></p>
+	</div>
+</div>
+
+<div class="gallery">
+	<img class="gallery-item" src="/assets/images/histogram/bbrot_fold.jpg" alt="Quartic Buddhabrot rotation">
+	<img class="gallery-item" src="/assets/images/histogram/bbrot_wisps.jpg" alt="Quartic Buddhabrot rotation">
+	<img class="gallery-item" src="/assets/images/histogram/bbrot_bug.jpg" alt="Quartic Buddhabrot rotation">
+	<img class="gallery-item" src="/assets/images/histogram/bbrot_angel.jpg" alt="Quartic Buddhabrot rotation">
+</div>
+
+
+<h3>Newton Fractal Histogram</h3>
+
+<p>I was recently introduced to the <a href="https://en.wikipedia.org/wiki/Newton_fractal" target="_blank">Newton's fractal</a> and wondered how it would look rendered using the Buddhabrot technique. I've rendered some proof of concept images and am very excited to explore more. Similarly to the Buddhabrot, there's a seed plane and z plane, resulting in 4 dimensions. (Generalizing to the Nova fractal increases this to 8 dimensions, but I haven't explored this at all yet.)<p>
+
+<p>Viewing the seed plane (first image) yields bright regions at the boundaries similar to traditional renders. Viewing the z plane (second image) yields bright regions at the roots. These behaviors are expected. However, 4D rotations between these planes are very interesting. Note that all of these images are of <nobr>f(z) = z<sup>3</sup> - 1.</nobr></p>
+
+<div class="gallery">
+	<img class="gallery-item" src="/assets/images/histogram/newton_seed.jpg" alt="Newton fractal histogram looking at seed plane">
+	<img class="gallery-item" src="/assets/images/histogram/newton_z.jpg" alt="Newton fractal histagram looking at z plane>
+	<img class="gallery-item" src="/assets/images/histogram/newton_triforce.jpg" alt="Newton fractal histogram rotation">
+	<img class="gallery-item" src="/assets/images/histogram/newton_lakes.jpg" alt="Newton fractal histogram rotation">
+	<img class="gallery-item" src="/assets/images/histogram/newton_astigmatism.jpg" alt="Newton fractal histogram rotation">
+	<img class="gallery-item" src="/assets/images/histogram/newton_ribs.jpg" alt="Newton fractal histogram rotation">
+</div>
 
 <h3>Mandelbrot Set</h3>
+
+<div class="exhibition">
+	<div class="exhibition-text">
+	
+	<p>Fulfilling a request from a friend to render a Mandelbrot set poster (pictured to the right) required double-precision arithmetic, which in turn required new software as I could no longer immediately port from Shadertoy.</p>
+	
+	<p>At the heart of the software are a few linear algebra classes/methods I made to work very similarly to GLSL. The set is rendered using a simple combination of escape time and orbit trapping, but along the way I discovered a technique to enhance geometric orbit trapping. It's a topic for its own article or video (which is currently on the way), but the jist is to add "teeth" to the geometric distance function so that more interesting things happen in the "empty space" between the hyperbolic components.</p>
+	
+	<p>I rendered decent-quality rough drafts of some of the interesting regions I found while searching for the ideal poster location:</p>
+	</div>
+	<div class="exhibition-view">
+		<img src="/assets/images/mandelbrot/poster_small.jpg" alt="Mandelbrot set">
+		<p>Mandelbrot set colored with escape time, orbit trapping, and a photo of the Milky Way</p>
+	</div>
+</div>
+
+<div class="gallery">
+	<img class="gallery-item" src="/assets/images/mandelbrot/shell_orbit.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/spiral_lobes.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/claws.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/seahorse2.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/hyperspace.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/julia.jpg" alt="Julia set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/beeg_spiral.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/hyperspace_julia.jpg" alt="Julia set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/trifecta.jpg" alt="Mandelbrot set">
+	<img class="gallery-item" src="/assets/images/mandelbrot/lightning.jpg" alt="Mandelbrot set">
+</div>
