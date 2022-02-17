@@ -14,9 +14,8 @@ $heading-color: hsl(219, 100%, 92%);
 }
 
 body {
-	
+	/* Might look for a different font */
 	font-family: 'Montserrat', sans-serif;
-	/*background-image: url('../images/bbrot_bg.jpg');*/
 	background-color: #000;
 	color: #f5f5f5;
 	margin: $spacing;
@@ -134,4 +133,11 @@ iframe.gallery-item {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.pdf{
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	height: 90vh;
 }

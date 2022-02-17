@@ -10,7 +10,7 @@ title: Offline Graphics | Anthony Hall
 <div class="exhibition">
 	<div class="exhibition-text">
 	
-	<p>If you've never heard the terms Buddhabrot or Nebulabrot, I highly recommend <a href="https://superliminal.com/fractals/bbrot/" target="_blank">this article</a>. Essentially, it is a histogram of the orbits of points that are <em>not</em> in the set.</p>
+	<p>If you've never heard the terms Buddhabrot or Nebulabrot, I highly recommend <a href="https://superliminal.com/fractals/bbrot/" target="_blank">this article</a>. Essentially, it is a histogram of the orbits of points that are <em>not</em> in the Mandelbrot set.</p>
 
 	<p>Consider that for a given trajectory, it has a starting C value, and at any iteration, it has some z value. Thus, there is a plane of seed values (C plane) and a plane of the points the trajectories visit (z plane, which is the traditional view). Since each plane has a real and imaginary axis, the object is 4-dimensional. (Technically , by selecting different z<sub>0</sub> values rather than fixing <nobr>z<sub>0</sub> = 0,</nobr> the object could be considered 6-dimensional. I plan to explore this in the near future, but a very small amount of experimentation suggests the results may not be super interesting.)</p>
 
@@ -37,7 +37,7 @@ title: Offline Graphics | Anthony Hall
 
 <p>I was recently introduced to the <a href="https://en.wikipedia.org/wiki/Newton_fractal" target="_blank">Newton's fractal</a> and wondered how it would look rendered using the Buddhabrot technique. I've rendered some proof of concept images and am very excited to explore more. Similarly to the Buddhabrot, there's a seed plane and z plane, resulting in 4 dimensions. (Generalizing to the Nova fractal increases this to 8 dimensions, but I haven't explored this at all yet.)<p>
 
-<p>Viewing the seed plane (first image) yields bright regions at the boundaries similar to traditional renders. Viewing the z plane (second image) yields bright regions at the roots. These behaviors are expected. However, 4D rotations between these planes are very interesting. Note that all of these images are of <nobr>f(z) = z<sup>3</sup> - 1.</nobr></p>
+<p>Viewing the seed plane (first image) yields bright regions at the boundaries, similar to traditional renders. Viewing the z plane (second image) yields bright regions at the roots. These behaviors are expected. However, 4D rotations between these planes are very interesting. Note that all of these images are of <nobr>f(z) = z<sup>3</sup> - 1.</nobr></p>
 
 <div class="gallery">
 	<img class="gallery-item" src="/assets/images/histogram/newton_seed.jpg" alt="Newton fractal histogram looking at seed plane">
@@ -57,7 +57,7 @@ title: Offline Graphics | Anthony Hall
 	
 	<p>At the heart of the software are a few linear algebra classes/methods I made to work very similarly to GLSL. The set is rendered using a simple combination of escape time and orbit trapping, but along the way I discovered a technique to enhance geometric orbit trapping. It's a topic for its own article or video (which is currently on the way), but the jist is to add "teeth" to the geometric distance function so that more interesting things happen in the "empty space" between the hyperbolic components.</p>
 	
-	<p>I rendered decent-quality rough drafts of some of the interesting regions I found while searching for the ideal poster location:</p>
+	<p>The gallery below showcases decent-quality rough drafts of some of the interesting regions I found while searching for the ideal poster location.</p>
 	</div>
 	<div class="exhibition-view">
 		<img src="/assets/images/mandelbrot/poster_small.jpg" alt="Mandelbrot set">
